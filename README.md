@@ -1,2 +1,2 @@
-# htmx-django-test
+# HTMX Django test
 Testando HTMX com Django

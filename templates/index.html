@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+  <div class="container" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+    <div class="mt-3">
+      {% include 'partials/books/create.html' %}
+    </div>
+
+    <div class="mt-3">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Título</th>
+            <th>Preço</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+
+        <tbody id="book-list">
+          {% include 'partials/books/list.html' %}
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.body.addEventListener("htmx:afterRequest", (e) => {
+    document.querySelector('#book-title').value = '';
+    document.querySelector('#book-price').value = '';
+  });
+</script>
+{% endblock %}

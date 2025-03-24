@@ -1,0 +1,13 @@
+<form class="form-inline">
+  <div class="mb-3">
+    <label for="book-title" class="form-label">Título</label>
+    <input type="text" class="form-control" id="book-title" name="title" required />
+  </div>
+  <div class="mb-3">
+    <label for="book-price" class="form-label">Preço</label>
+    <input type="number" class="form-control" id="book-price" name="price" required />
+  </div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-success" hx-post="{% url 'book-create' %}" hx-trigger="click" hx-target="#book-list">Cadastrar</button>
+  </div>
+</form>

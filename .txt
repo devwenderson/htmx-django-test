@@ -1,0 +1,5 @@
+Pegar o form do model
+Inserir o conteúdo do post dentro do form
+Verificar se o form é válido
+Salvar 
+Renderizar o html

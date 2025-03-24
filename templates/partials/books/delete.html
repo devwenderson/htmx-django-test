@@ -1,0 +1,10 @@
+<tr>
+    <form>
+        <td>{{book.pk}}</td>
+        <td colspan="2"><b>Você quer mesmo deletar esse livro?</b></td>
+        <td>
+            <button class="btn btn-danger" type="submit" hx-post="{% url 'book-delete' book.pk %}" hx-target="closest #book-list" hx-swap="innerHTML">Deletar</button>
+            <button class="btn btn-primary" type="submit" hx-post="{% url 'book-detail' book.pk %}" hx-target="closest tr" hx-swap="outerHTML">Cancelar</button>    
+        </td>
+    </form>
+</tr>

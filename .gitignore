@@ -1,0 +1,14 @@
+# DJANGO AUTO GENERATED
+__pycache__
+db.sqlite3
+*.sqlite3
+staticfiles
+
+# ENVIRONMENT
+venv
+env
+.venv
+.env
+
+# IDE
+.vscode

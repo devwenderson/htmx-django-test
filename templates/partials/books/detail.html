@@ -1,0 +1,9 @@
+<tr>
+    <td>{{ book.pk }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.price }}</td>
+    <td>
+      <button class="btn btn-primary" hx-put="{% url 'book-update' book.pk %}" hx-target="closest tr" hx-swap="outerHTML"> Editar</button>
+      <button class="btn btn-danger" hx-delete="{% url 'book-delete' book.pk %}" hx-target="closest tr" hx-swap="outerHTML"> Deletar</button>
+    </td>
+</tr>

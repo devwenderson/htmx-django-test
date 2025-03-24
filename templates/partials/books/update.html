@@ -1,0 +1,16 @@
+<tr>
+  <form>
+    <td>{{ book.pk }}</td>
+    <td>
+      <input type="text" class="form-control" id="book-title" name="title" value="{{ book.title }}" />
+    </td>
+    <td>
+      <input type="number" class="form-control" id="book-price" name="price" value="{{ book.get_price }}" />
+    </td>
+    <td>
+      <button type="submit" class="btn btn-success" hx-post="{% url 'book-update' book.pk %}" hx-target="closest tr" hx-swap="outerHTML" hx-include="closest tr">Salvar</button>
+
+      <button class="btn btn-warning" hx-get="{% url 'book-detail' book.pk %}" hx-target="closest tr" hx-swap="outerHTML">Cancelar</button>
+    </td>
+  </form>
+</tr>
